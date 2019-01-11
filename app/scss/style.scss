@@ -4,8 +4,18 @@
 
 
 body {
-    background-image: url(../img/bg.png);
+    background-image:linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), url(../img/bg.png);
     font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    max-width:1270px;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    margin: auto;
+    box-sizing: border-box;
+    padding: 60px;
 }
 
 #main-header {
@@ -13,58 +23,60 @@ body {
     font-size: 50px;
     text-align: center;
     margin-top:20px;
-    margin-bottom: 60px;;
+    margin-bottom: 60px;
 }
 
-.img-box {
-    position: relative;
-    display: inline-block;
+.staff-box {
     margin: 0;
-    height: 250px;
-    text-align: center;
     flex-basis: 20%;
-    justify-content: center; 
+    margin-bottom: 40px; 
    
 }
 
-.img-box:hover .staff-photo-color,
-.img-box:hover .staff-photo
+.staff-box:hover .staff-photo-color,
+.staff-box:hover .staff-photo
 {
     opacity: 0.7;
 }
+
+.staff-photo-container {
+    position: relative;
+    width: 140px;
+    height: 140px;
+    margin: auto;
+} 
 
 .staff-photo {
     @include staff-img-properties(50%, 140px, 140px,);
     transition: opacity 0.6s  ease-out;
 }
 
-
 .staff-photo-color {
     @include staff-img-properties(50%, 140px, 140px,);
     background-color:$light-blue;
-    opacity:0.5;
-    z-index: 2;
-    position:absolute;
-    left:50%;
+    opacity: 0.5;
+    z-index: 1;
+    position: absolute;
+    left: 50%;
     transform: translate(-50%);
-    transition: opacity 0.6s  ease-out;
+    transition: opacity 0.6s  ease-out
 }
 
-.mail-photo {
+.mail-sign {
     width:30px;
     height:30px;
+    border-radius: 50%;
+    background-color: $main-color;
     position: absolute;
-    right: 20%;
-    transform: translate(-20%);
-    z-index: 3;
+    right:10%;
+    top:1%;
+    z-index: 2;
+    text-align: center;
+    line-height: 30px;
 }
 
-.container {
-    width:90%;
-    display: flex;
-    flex-wrap:wrap;
-    justify-content: space-between;
-    margin: auto;
+.mail-icon {
+    color: white;
 }
 
  
