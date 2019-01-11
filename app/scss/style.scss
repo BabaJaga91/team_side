@@ -1,0 +1,97 @@
+@import "zmienne";
+@import "mixins";
+
+
+
+body {
+    background-image: url(../img/bg.png);
+    font-family: 'Open Sans', sans-serif;
+}
+
+#main-header {
+    color: $main-color;
+    font-size: 50px;
+    text-align: center;
+    margin-top:20px;
+    margin-bottom: 60px;;
+}
+
+.img-box {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    height: 250px;
+    text-align: center;
+    flex-basis: 20%;
+    justify-content: center; 
+   
+}
+
+.img-box:hover .staff-photo-color,
+.img-box:hover .staff-photo
+{
+    opacity: 0.7;
+}
+
+.staff-photo {
+    @include staff-img-properties(50%, 140px, 140px,);
+    transition: opacity 0.6s  ease-out;
+}
+
+
+.staff-photo-color {
+    @include staff-img-properties(50%, 140px, 140px,);
+    background-color:$light-blue;
+    opacity:0.5;
+    z-index: 2;
+    position:absolute;
+    left:50%;
+    transform: translate(-50%);
+    transition: opacity 0.6s  ease-out;
+}
+
+.mail-photo {
+    width:30px;
+    height:30px;
+    position: absolute;
+    right: 20%;
+    transform: translate(-20%);
+    z-index: 3;
+}
+
+.container {
+    width:90%;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    margin: auto;
+}
+
+ 
+.staff-information {
+    margin-top:10px;
+    text-align: center;
+    p {
+        margin: 0;
+    }
+    p.name{
+        font-size: 18px;
+        color: $main-color;
+        margin-bottom:10px;
+    }
+    div.staff-other-info{
+        p {
+            font-weight: $thin-font;
+            font-size: $thin-font-size;
+        }
+        
+        p.position {
+            color:$light-blue;
+        }
+        p.city {
+           color: #808080;
+        }
+    }  
+}
+
+

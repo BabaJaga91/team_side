@@ -1,0 +1,6 @@
+
+@mixin staff-img-properties ($rad, $wid, $heig) {
+    border-radius: $rad;
+    width: $wid;
+    height:$heig; 
+}

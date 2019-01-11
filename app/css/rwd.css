@@ -1,0 +1,43 @@
+@media (max-width: 1224px) {
+    
+    .img-box {
+      flex-basis: 25%; 
+    }
+    .mail-photo {
+      right: 25%;
+      transform: translate(-25%);
+    }
+}
+    
+ @media (max-width: 1024px) {
+    
+    .img-box {
+      flex-basis: 30%; 
+    }
+    .mail-photo {
+      right: 25%;
+      transform: translate(-25%);
+    }
+}
+  
+@media (max-width: 768px) {
+    
+    .img-box {
+      flex-basis: 50%; 
+    }
+    .mail-photo {
+    right: 30%;
+    transform: translate(-25%);
+    }
+}
+
+@media (max-width: 520px) {
+    
+    .img-box {
+      flex-basis: 100%; 
+     }
+    .mail-photo {
+    right: 32%;
+    transform: translate(-32%);
+    }
+}
