@@ -1,19 +1,4 @@
-$(document).ready(function() {
-    $('.staff-box').click(function(){
-        $('body').css("background-color", "blue");
-        $('#slider').show();
-        $('.staff-box').hide();
-        $('#main-header').hide();
-
-        $('#slide-cap-2').show();
-    });
-});
-
-
-// $('#figure1').click(function(){
-//    $('#slide2').show();
-// });
-
+$(document).ready(function(){
 
 
 const slideShow = $('.slide-show');
@@ -37,7 +22,6 @@ function slide(newSlideIndex) {
    },1000);
 
    slideIndex = newSlideIndex;
-
 }
 
 
@@ -59,10 +43,24 @@ next.on('click',function(){
 });
 
 
+$('.staff-box').click(function(){
+   $('.slider-container').show();
+   $('.container').hide();
+   $('#main-header').hide();
+}); 
+
 close.click(function(){
-   $('#slider').hide();
-   $('.staff-box').show();
+   $('.slider-container').hide();
+   $('.container').show();
    $('#main-header').show();
-   $('body').css("background-color", "#808080");
 });
 
+
+
+
+$(document).keydown(function(event) {
+   alert('You pressed ' + event.keyCode);
+   event.preventDefault();
+ });
+
+});
