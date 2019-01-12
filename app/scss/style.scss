@@ -3,8 +3,17 @@
 
 
 
+html, body, figure, figcaption {
+    margin: 0;
+    padding:0;
+    border: 0;
+ }
+
 body {
-    background-image:linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), url(../img/bg.png);
+    
+    // background-image:linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), url(../img/bg.png);
+    background-color: #808080;
+    
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -22,8 +31,10 @@ body {
     color: $main-color;
     font-size: 50px;
     text-align: center;
+    margin:auto;
     margin-top:20px;
     margin-bottom: 60px;
+    
 }
 
 .staff-box {
@@ -106,4 +117,98 @@ body {
     }  
 }
 
+// .main-container {
+//     position: relative;
+//     max-width: 1670px;
+//     margin: auto;
+   
+   
+// }
 
+// slider
+
+#slider {
+    // position: relative;
+    // left: 0px;
+    // top:0px;
+    
+    // / overflow: hidden;
+    // width: 600px;
+ 
+
+    // display: none;
+}
+
+
+    
+ 
+#slider {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+    width: 1000px;
+    height: 600px;
+    z-index: 5;
+    display: none;
+    
+ }
+ 
+ .slide-show, .single-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+ }
+ 
+ .single-slide img {
+    width: 100%;
+    height: 100%;
+ }
+ 
+ .slider-nav {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    transform: translateY(-50%);
+    z-index: 5;
+    font-size: 4rem;
+    color: #fff;
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
+ }
+ 
+ .slider-nav-next {
+    left: auto;
+    right: 30px;
+ }
+ 
+ .slider-close{
+     position: absolute;
+     right: 10%;
+     top:10%;
+     z-index: 5;
+     font-size: 4rem;
+     color: #fff;
+     padding: 0;
+     border: 0;
+     background: none;
+     cursor: pointer;
+ }
+ .slide-caption {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    font-size: 3.5rem;
+    color: #fff;
+    z-index: 3;
+ }
+ 
+ 

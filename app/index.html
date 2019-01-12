@@ -9,12 +9,16 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 </head>
 <body>
+   
+<!--    
+    <div class="main-container">
+     -->
+    
 
     <h1 id="main-header">Meet our team</h1>
-    
     <div class="container">
-     
-        <figure class="staff-box">
+       
+        <figure id="figure1" class="staff-box">
             <div class="staff-photo-container">
                 <div class="staff-photo-color"></div>
                 <img class="staff-photo" src="https://images.unsplash.com/photo-1545418768-cfd96e92e7a7?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&h=200&fit=crop&ixid=eyJhcHBfaWQiOjF9" alt="avatar">
@@ -168,8 +172,76 @@
                 </div>
             </div>
         </figure> 
-
     </div>
 
+
+
+   <!-- Slider -->
+   <div id="slider">
+    <div class="slide-show">
+       <!-- slide item -->
+       <figure class="single-slide">
+          
+          <figcaption class="slide-caption">Slajd 1</figcaption>
+       </figure>
+       <!-- slide item end -->
+
+       <!-- slide item -->
+       <figure class="single-slide">
+          
+          <figcaption id="slide-cap-2" class="slide-caption">Slajd 2</figcaption>
+       </figure>
+       <!-- slide item end -->
+
+       <!-- slide item -->
+       <figure class="single-slide">
+          
+          <figcaption class="slide-caption">Slajd 3</figcaption>
+       </figure>
+       <!-- slide item end -->
+
+       <!-- slide item -->
+       <figure class="single-slide">
+          
+          <figcaption class="slide-caption">Slajd 4</figcaption>
+       </figure>
+       <!-- slide item end -->
+    </div>
+
+    <!-- nawigacja -->
+    <button class="slider-nav slider-nav-prev">
+        <i class="fas fa-angle-left"></i>
+    </button>
+    <button class="slider-nav slider-nav-next">
+        <i class="fas fa-angle-right"></i>
+    </button>
+    <!-- nawigacja end -->
+
+    <!-- button close-->
+
+
+    <button class="slider-close">
+        <i class="fas fa-times"></i>
+
+    </button>
+
+ </div>
+ <!-- Slider end -->
+
+
+
+
+
+
+
+
+
+<!-- </div> -->
+
+
+ 
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html> 
