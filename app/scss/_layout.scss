@@ -1,0 +1,101 @@
+.container {
+    max-width:1270px;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    padding: 60px;   
+}
+
+#main-header {
+    color: $main-color;
+    font-size: 50px;
+    text-align: center;
+    margin:auto;
+    margin-top:20px;
+    margin-bottom: 60px;   
+}
+
+.staff-box {
+    margin: 0;
+    flex-basis: 20%;
+    margin-bottom: 40px;    
+}
+
+.staff-box:hover .staff-photo-color,
+.staff-box:hover .staff-photo
+{
+    opacity: 0.7;
+    
+}
+
+.staff-photo-container {
+    position: relative;
+    width: 140px;
+    height: 140px;
+    margin: auto;
+} 
+
+.staff-photo {
+    @include img-properties(50%, 140px, 140px);
+    transition: opacity 0.6s  ease-out;    
+}
+
+.staff-photo-color {
+    @include img-properties(50%, 140px, 140px);
+    background-color:$light-blue;
+    opacity: 0.5;
+    z-index: 1;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    transition: opacity 0.6s  ease-out;
+    cursor: pointer;
+}
+
+.mail-sign {
+    @include img-properties(50%, 30px, 30px);
+    background-color: $main-color;
+    position: absolute;
+    right:10%;
+    top:1%;
+    z-index: 2;
+    text-align: center;
+    line-height: 30px;
+}
+
+.mail-icon {
+    color: #fff;
+}
+
+ 
+.staff-information {
+    margin-top:10px;
+    text-align: center;
+    p {
+        margin: 0;
+    }
+    .name{
+        font-size: 18px;
+        color: $main-color;
+        margin-bottom:10px;
+        cursor: pointer;
+
+    }
+    div.staff-other-info{
+   
+        p {
+            font-weight: $thin-font;
+            font-size: $thin-font-size;
+        }
+        
+        p.position {
+            color:$light-blue;
+        }
+        p.city {
+           color: #808080;
+        }
+    }  
+}

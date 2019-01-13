@@ -1,6 +1,5 @@
 $(document).ready(function(){
 
-
    const slideShow = $('.slide-show');
    const slides = $('.single-slide');
    const prev = $('.slider-nav-prev');
@@ -11,9 +10,11 @@ $(document).ready(function(){
    let slideIndex = 0;
 
 
-   
    $('.staff-box').click(function(){
-      $(this).data("index");
+      let currentSlideIndex =  $(this).data("index");
+      slideIndex = currentSlideIndex;
+      slideShow.css('margin-left', currentSlideIndex * (-100) + '%');
+
       $('.slider-container').show();
       $('.container').hide();
       $('#main-header').hide();
@@ -26,24 +27,16 @@ $(document).ready(function(){
    });
 
 
-   
    function slide(newSlideIndex) {
       if(newSlideIndex < 0 || newSlideIndex > slideCount - 1) {
          return;
       }
 
-
-
-
-
-
-      
+   let marginLeft = (newSlideIndex * (-100)) + '%';
    
-       let marginLeft = (newSlideIndex * (-100)) + '%';
-   
-      slideShow.animate({
-         'margin-left': marginLeft
-      },1000);
+   slideShow.animate({
+      'margin-left': marginLeft
+     },1000);
    
       slideIndex = newSlideIndex;
     }
@@ -66,9 +59,5 @@ $(document).ready(function(){
       slide( slideIndex + 1 );
    });
    
-
-   
-
-   
-   });
+});
    
