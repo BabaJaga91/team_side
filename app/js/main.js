@@ -9,7 +9,6 @@ $(document).ready(function(){
    let slideWidth = 100/slideCount;
    let slideIndex = 0;
 
-
    $('.staff-box').click(function(){
       let currentSlideIndex =  $(this).data("index");
       slideIndex = currentSlideIndex;
@@ -25,7 +24,6 @@ $(document).ready(function(){
       $('.container').show();
       $('#main-header').show();
    });
-
 
    function slide(newSlideIndex) {
       if(newSlideIndex < 0 || newSlideIndex > slideCount - 1) {
